@@ -19,7 +19,7 @@ console.log(averageOfNumbers([0, 2, 3, 'a', 'b', 3, 4]));
 // 2
 
 function doMath(x, znak, y) {
-    let result = NaN;
+    let result = null;
     switch (znak) {
         case '+':
             result = x + y;
@@ -39,11 +39,14 @@ function doMath(x, znak, y) {
         case '^':
             result = x ** y;
             break;
+        default:
+            result = NaN;
+            break;
     }
     return result;
 }
 
-console.log(doMath(10, '^', 5));
+console.log(doMath(10, '*', 5));
 
 
 // 3
