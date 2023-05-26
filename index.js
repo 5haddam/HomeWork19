@@ -53,14 +53,14 @@ function createTwoDimensionalArray() {
     let mainArrayLength = 0;
     do {
         mainArrayLength = parseInt(prompt('Please, enter length of main array'));
-    } while (!mainArrayLength || isNaN(mainArrayLength));
+    } while (isNaN(mainArrayLength));
     
     for (let i = 1; i <= mainArrayLength; i++) {
         let nestedArray = [];
         let nestedArrayLength = 0;
         do {
             nestedArrayLength = +prompt(`Please, enter length of ${i}\'th nested array`);
-        } while (!nestedArrayLength || isNaN(nestedArrayLength));
+        } while (isNaN(nestedArrayLength));
         for (let j = 1; j <= nestedArrayLength; j++) {
             let newValueForNestedArray = prompt(`Please, enter ${j}\'th element in nested array`);
             nestedArray.push(newValueForNestedArray);
